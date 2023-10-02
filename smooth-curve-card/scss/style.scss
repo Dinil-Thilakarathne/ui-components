@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5c6775;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.smooth-curve-card{
+    $border: 1rem;
+    $invert-border: 2rem;
+    $top-bg-clr: #3b82f6;
+    $botoom-bg-clr: #e2e8f0;
+    $loader-bg-clr: #b2c0d3;
+
+    height: 450px;
+    width: 300px;
+    background-color: $botoom-bg-clr;
+    border-radius: 1rem;
+    
+    &-top,
+    &-bottom{
+        height: 50%;
+        width: 100%;
+        // border: 1px solid black;
+        outline: none;
+        position: relative;
+        padding: .5rem .75rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    &-top{
+        background-color: $top-bg-clr;
+        border-radius: $border $border 0 $invert-border;
+        z-index: 2;
+        &::after{
+            position: absolute;
+            bottom: -$invert-border;
+            right: 0;
+            content: '';
+            display: block;
+            height: $invert-border;
+            width: $invert-border;
+            background-color: $top-bg-clr;
+        }
+        &___placeholder{
+            height: 60%;
+            width: 100%;
+            border-radius: $border*.5;
+        }
+    }
+    &-bottom{
+        background-color: $botoom-bg-clr;
+        border-radius: 0 $invert-border $border $border;
+        z-index: 3;
+
+        &___placeholders{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: .5rem;
+
+            & .placeholder{
+                height: 30px;
+                width: 100px;
+                border-radius: $border*.5;
+            }
+        }
+
+        &__btn{
+            height: 50px;
+            width: 100%;
+            border-radius: $border*.75;
+        }
+    }
+    .loading {
+        position: relative;
+        background-color: $loader-bg-clr;
+        overflow: hidden;
+      
+        &::after {
+          display: block;
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          transform: translateX(-100%);
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.8),
+            transparent
+          );
+          animation: loading 1.2s infinite;
+        }
+    }
+    @keyframes loading {
+        100% {
+          transform: translateX(100%);
+        }
+    }
+}
