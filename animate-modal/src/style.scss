@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.modal-wrapper{
+    height: 100vh;
+    width: 100%;
+    padding: 256px 16px ;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .modal-btn{
+        $btn-gradient-start: #8b5cf6;
+        $btn-gradient-end: #d946ef;
+
+        background: linear-gradient(to right, $btn-gradient-start, $btn-gradient-start);
+        color: #fff;
+        padding: .75rem 1.5rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.25rem;
+        cursor: pointer;
+    }
+}
+
+.modal{
+    background-color: rgba(15, 23, 42, 0.2);
+    backdrop-filter: blur(8px);
+    padding: 2rem;
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+    cursor: pointer;
+
+    &-box{
+        $modal-gradient-start: #7c3aed;
+        $modal-gradient-end: #4f46e5;
+
+        background: linear-gradient(to right, $modal-gradient-start, $modal-gradient-start);
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        position: relative;
+        overflow: hidden;
+
+        & .modal-bg-icon{
+            font-size: 12rem;
+            color: rgb(255 255 255 / 0.3);
+            transform: rotate(-25deg);
+            position: absolute;
+            top: -60px;
+            right: -40px;
+            z-index: 1;
+        }
+        & .modal-content{
+            min-height: 200px;
+            width: max(300px, 50vw);
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            &__icon{
+                color: #fff;
+                font-size: 4rem;
+            }
+
+            &__header{
+                font-size: clamp(2rem, 5vw, 3rem);
+            }
+
+            &__description{
+                text-align: center;
+                font-size: clamp(1rem, 5vw, 1.2rem);
+            }
+            &__btns{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                gap: 4px;
+
+                @media (min-width:480px) {
+                    flex-direction: row;
+                    width: 70%;
+                }
+
+                & button{
+                    padding: .75rem 1.5rem;
+                    border: none;
+                    border-radius: 8px;
+                    font-weight: bold;
+                    font-size: 1.1rem;
+                    color: #fff;
+                    cursor: pointer;
+
+                    &.btn-secondary{
+                        background-color: transparent;
+
+                        &:hover{
+                            background-color: rgb(255 255 255 / 0.1);
+                        }
+                    }
+
+                    &.btn-primary{
+                        background-color: #fff;
+                        color: #4f46e5;
+
+                        &:hover{
+                            background-color: rgb(255 255 255 / 0.9);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
