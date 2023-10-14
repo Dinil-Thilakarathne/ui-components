@@ -16,7 +16,7 @@ const App = () => {
             <Profilecard
                 profileImgUrl={profileData.imgUrl}
                 profileName={profileData.name}
-                ProfileOccupation={profileData.address}
+                ProfileOccupation={profileData.occupation}
                 ProfileAddress={profileData.address}
                 ProfileNumber={profileData.number}
                 ProfileEmail={profileData.email}
