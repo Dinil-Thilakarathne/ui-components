@@ -4,16 +4,7 @@ import { Tilt } from '@jdion/tilt-react'
 
 const Profilecard = ({profileImgUrl, profileName , ProfileAddress, ProfileOccupation, ProfileNumber, ProfileEmail}) => {
     return (
-        <Tilt className="card"
-            // whileHover={{ 
-            //     scale: 1.1, 
-            //     rotateX: 10, 
-            //     rotateY: 15, 
-            //     translateZ: 20,
-            //     boxShadow: '0 0 30px rgba(0, 0, 0, 0.4)' 
-            // }} 
-            // transition={{ duration: 0.5 , ease : 'easeIn'}} 
-        >
+        <Tilt className="card">
             <div className="card-top">
                 <div className="card-top__profile-img">
                     <img src={profileImgUrl} alt="" />
