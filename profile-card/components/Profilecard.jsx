@@ -1,17 +1,18 @@
 import {FaLocationDot, FaPhone} from 'react-icons/fa6';
 import {motion} from 'framer-motion'
+import { Tilt } from '@jdion/tilt-react'
 
 const Profilecard = ({profileImgUrl, profileName , ProfileAddress, ProfileOccupation, ProfileNumber, ProfileEmail}) => {
     return (
-        <motion.div className="card"
-            whileHover={{ 
-                scale: 1.1, 
-                rotateX: 10, 
-                rotateY: 15, 
-                translateZ: 20,
-                boxShadow: '0 0 30px rgba(0, 0, 0, 0.4)' 
-            }} 
-            transition={{ duration: 0.5 , ease : 'easeIn'}} 
+        <Tilt className="card"
+            // whileHover={{ 
+            //     scale: 1.1, 
+            //     rotateX: 10, 
+            //     rotateY: 15, 
+            //     translateZ: 20,
+            //     boxShadow: '0 0 30px rgba(0, 0, 0, 0.4)' 
+            // }} 
+            // transition={{ duration: 0.5 , ease : 'easeIn'}} 
         >
             <div className="card-top">
                 <div className="card-top__profile-img">
@@ -44,7 +45,7 @@ const Profilecard = ({profileImgUrl, profileName , ProfileAddress, ProfileOccupa
                 <div className="divider"></div>
                 <p className="profile-email">{ProfileEmail}</p>
             </div>
-        </motion.div>
+        </Tilt>
     )
 }
 
