@@ -108,6 +108,10 @@ body{
                     top: 0;
                     height: calc(var(--y-line-h) / 2.5);
                 }
+
+                & .x-line{
+                    margin-left: 4px;
+                }
             }
         }
 
