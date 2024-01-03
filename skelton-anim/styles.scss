@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    height: 420px;
+    width: min(100%, 320px);
+    background: #11131e;
+    padding: 1.5rem;
+    border: none;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    &-header{
+        width: 100%;
+        display: flex;
+
+        & .profile-img{
+            height: 75px;
+            width: 75px;
+            border: none;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            background-color: aqua;
+        }
+
+        & .profile-info{
+            flex-shrink: 1;
+            width: min(100%, calc(100% - 100px));
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: .75rem;
+            margin-left: 20px;
+            
+            .line{
+                height: 15px;
+                width: calc(100% - 25px);
+            }
+
+            .line-2{
+                width: calc(100% - 45px);
+            }
+        }
+    }
+
+    & .line{
+        display: block;
+        background-color: aqua;
+        border: none;
+        border-radius: 1rem;
+        height: 15px;
+    }
+
+    &-body{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        // align-items: flex-start;
+        gap: .75rem;
+
+        & .line-1{
+            width: 100%;
+
+        }
+
+        & .line-2{
+            width: calc(100% - 25px);
+        }
+        & .line-3{
+            width: calc(100% - 45px);
+        }
+    }
+
+    &-btn{
+        width: calc(100% - 15px);
+        height: 45px;
+        background-color: aqua;
+        border: none;
+        border-radius: 1rem;
+    }
+}
