@@ -224,7 +224,7 @@ img{
         display: none;
 
         @media (min-width: 340px) {
-            display: block;
+            display: flex;
         }
         
         @media (min-width: 980px) {
