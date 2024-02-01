@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+:root{
+    --fs-large: clamp(2rem, (2rem + 2.5vw), 8rem);
+    --fs-medium: clamp(1rem, (1rem + 1.5vw), 4rem);
+    --fs-small: clamp(1rem, (1rem + 1vw), 1.5rem);
+
+    --clr-text: hsl(0, 0%, 20%);
+    --clr-text-magnetic-btn: hsl(0, 0%, 80%);
+    --clr-magnetic-btn-bg: hsl(0, 0%, 10%);
+    --clr-blue: #455CE9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100%;
+    width: 100%;
+    font-family: "Poppins";
+    color: var(--clr-text);
+}
+
+.home-page{
+    height: 100%;
+    width: 100%;
+}
+
+.header{
+    height: 75px;
+    width: min(100%, 1280px);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo{
+        font-size: var(--fs-medium);
+    }
+
+    &__menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 2rem;
+
+        list-style: none;
+    }
+
+    &__link{
+        text-decoration: none;
+        font-size: var(--fs-small);
+        color: var(--clr-text);
+    }
+}
+
+.hero{
+    height: calc(100vh - 75px);
+    width: min(100%, 1280px);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+
+    &__header{
+        font-size: var(--fs-large);
+    }
+}
+
+.magnetic-btn{
+    width: 12rem;
+    height: 12rem;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--clr-magnetic-btn-bg);
+    color: var(--clr-text-magnetic-btn);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+
+    & .text{
+        display: block;
+        font-size: var(--fs-small);
+    }
+}
