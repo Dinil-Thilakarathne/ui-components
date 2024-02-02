@@ -111,7 +111,7 @@ bgOverlay.addEventListener('click', closeMenu)
 sidebarLinks.forEach((link) => {
   link.addEventListener('click', () => {
     event.preventDefault();
-    tlOpen.reverse()
+    tlOpen.reverse(1.5)
     tlOpen.eventCallback('onReverseComplete', redirectToURL)
   } )
 })
