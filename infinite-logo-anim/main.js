@@ -9,17 +9,13 @@ function addAnimation() {
     scroller.setAttribute("data-animated", true);
 
 
+    const scrollerInnerWrapper =  scroller.querySelector('.scroller__inner-wrappper');
     const scrollerInner =  scroller.querySelector('.scroller__inner');
     const scrollerInnerContent = Array.from(scrollerInner.children);
 
-    scrollerInnerContent.forEach(item => {
-      const dupilcatedItem = item.cloneNode(true)
-      // console.log(dupilcatedItem);
-
-      dupilcatedItem.setAttribute('aria-hidden', true)
-
-      scrollerInner.appendChild(dupilcatedItem)
-    })
+    const dupilcatedItem = scrollerInner.cloneNode(true)
+    dupilcatedItem.setAttribute('aria-hidden', true)
+    scrollerInner.parentElement.appendChild(dupilcatedItem)
   })
 }
 
