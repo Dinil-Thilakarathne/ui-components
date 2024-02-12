@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "mabry-bold-pro";
+  src: url("./font/mabry-bold-pro.ttf");
+}
+:root {
+  --white: white;
+  --black: black;
+  --pink: #ff90e8;
+  --dim-grey: #78716c;
+
+  --ff-base: mabry-bold-pro;
+
+  --fs-base: 16px;
+  --fs-small: clamp(1rem, (1rem + 1.5vw), 2.5rem);
+  --fs-medium: clamp(1.5rem, (1rem + 1vw), 2.5rem);
+  --fs-large: clamp(4rem, (4rem + 4.5vw), 12rem);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-family: var(--ff-base);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 6rem 7rem;
+}
+
+.footer-grid {
+  display: grid;
+  row-gap: 2rem;
+  overflow: hidden;
+}
+.footer-logo {
+}
+
+.footer-logo a {
+  font-size: var(--fs-large);
+  text-transform: uppercase;
+}
+.footer-body .inner-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.form-wrapper {
+  display: grid;
+  grid-row-gap: 2rem;
+}
+.form-wrapper p {
+  font-size: var(--fs-medium);
+}
+form {
+  grid-column-gap: 2px;
+  grid-row-gap: 0px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 5rem;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+form .user-email {
+  height: 4rem;
+  background-color: var(--white);
+  color: var(--black);
+  border-style: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  outline: none;
+}
+
+.user-email::placeholder {
+  color: black;
+}
+
+.submit-btn {
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  outline: none;
+  background-color: var(--pink);
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.footer-body .inner-container .footer-links {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.footer-links ul {
+  height: 100%;
+  display: grid;
+}
+
+.footer-bottom {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.social-icon-grid {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+@media (min-width: 700px) {
+  .footer-body .inner-container,
+  .footer-body .inner-container .footer-links,
+  .footer-bottom {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-body .inner-container {
+    grid-column-gap: 20vw;
+  }
+}
