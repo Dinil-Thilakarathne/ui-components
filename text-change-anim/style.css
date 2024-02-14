@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: white;
+  margin: 0rem;
+  overflow: hidden;
+}
+
+.animated-text {
+  font-family: "Space Mono", monospace;
+  font-size: clamp(3rem, 10vw, 10rem);
+  color: black;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
