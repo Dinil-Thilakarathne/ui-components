@@ -1,17 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap");
 :root {
   --fs-large: clamp(2rem, (1.75rem + 1.5vw), 6rem);
   --fs-medium: clamp(1rem, (1rem + 1.5vw), 4rem);
-  --fs-small: clamp(1rem, (1rem + 1vw), 1.5rem);
+  --fs-small: clamp(1rem, (1rem + 1vw), 1.25rem);
 
   --color-sidebar-bg: hsl(0, 0%, 100%);
   --color-text-white: hsl(0, 0%, 90%);
-  --color-text-shade: hsl(0, 0%, 80%);
+  --color-text-shade: hsl(0, 0%, 65%);
   --color-text-black: hsl(0, 0%, 5%);
   --color-main-bg: hsl(0, 0%, 90%);
   --color-bg-overlay: hsla(0, 0%, 10%, 0.5);
-  --color-menu-btn-bg: hsl(0, 0%, 10%);
-  --color-menu-link-hover-bg: hsla(0, 0%, 10%,.5);
+  --color-menu-btn-bg: #ff90e8;
+  --color-menu-link-hover-bg: hsla(0, 0%, 10%, 0.75);
+  --color-menu-link-hover-bg: #ff90e8;
+  --color-stroke-bg: #ff90e8;
 }
 * {
   margin: 0;
@@ -43,8 +45,8 @@ body {
     align-items: center;
     justify-content: space-around;
 
-    & .header-logo{
-        font-size: var(--fs-small);
+    & .header-logo {
+      font-size: var(--fs-small);
     }
   }
 
@@ -57,11 +59,12 @@ body {
     justify-content: space-between;
     gap: 1rem;
     background-color: var(--color-menu-btn-bg);
-    color: var(--color-text-white);
+    color: var(--color-text-black);
+    font-size: 1rem;
     cursor: pointer;
 
     & path {
-      stroke: var(--color-text-white);
+      stroke: var(--color-text-black);
     }
   }
 }
@@ -101,7 +104,7 @@ body {
       display: block;
       width: 100%;
       height: 4px;
-      background-color: black;
+      background-color: var(--color-stroke-bg);
       margin: 0.5rem 0;
     }
 
@@ -144,13 +147,13 @@ body {
       aspect-ratio: 1;
       scale: 0;
       display: none;
-      margin-left: 1rem;
+      margin-left: 2rem;
     }
 
-    &.active{
-        & .sidebar__link{
-            color: var(--color-text-black);
-        }
+    &.active {
+      & .sidebar__link {
+        color: var(--color-text-black);
+      }
     }
   }
 
@@ -158,8 +161,7 @@ body {
     text-decoration: none;
     font-size: var(--fs-large);
     color: var(--color-text-shade);
-    transition: color .25s ease-in;
-    
+    transition: color 0.25s ease-in;
   }
 
   & .link-bg-fill {

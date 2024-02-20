@@ -10,7 +10,7 @@ const sidebarSocialLinks = gsap.utils.toArray('.social-list__item')
 const bgOverlay = document.querySelector('.bg-overlay')
 
 // animated timeline 
-const tlOpen = gsap.timeline({ defaults: { duration: .5, ease: "power2.ease" } })
+const tlOpen = gsap.timeline({ defaults: { duration: .25, ease: "power2.ease" } })
 
 // Set initial states
 gsap.set(sideBar, { x: -450 });
@@ -18,14 +18,14 @@ gsap.set([".sidebar-top .text", ".sidebar-bottom .text"], { clipPath: "polygon(0
 gsap.set([".sidebar-top .divider", ".sidebar-bottom .divider"], { width: 0 });
 gsap.set(sidebarLinksBgFill, { clipPath: "circle(0% at 0 100%)" });
 gsap.set(sidebarSocialLinks, { opacity: 0, y: '10%', x: '-5%' });
-gsap.set([closeBtn, sidebarLinks], { opacity: 0, y: '10%', x: '-20%' });
-gsap.set(bgOverlay, {display: "none"})
+gsap.set([closeBtn, sidebarLinks], { opacity: 0, y: '20%', x: '-20%' });
+gsap.set(bgOverlay, { display: "none" })
 
 // Add animations to the timeline
 tlOpen
   .to(sideBar, {
     x: 0,
-    duration: 1
+    duration: .5
   })
   .to(bgOverlay, {
     display: "block"
@@ -36,13 +36,12 @@ tlOpen
   })
   .to([".sidebar-top .text", ".sidebar-bottom .text"], {
     clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
-    stagger: .75,
+    stagger: .5,
     duration: .25
   })
   .to([".sidebar-top .divider", ".sidebar-bottom .divider"], {
     width: "100%",
     stagger: .75,
-    duration: .5
   }, "<")
   .to(sidebarSocialLinks, {
     opacity: 1,
@@ -54,7 +53,8 @@ tlOpen
     opacity: 1,
     x: 0,
     y: 0,
-    stagger: .25
+    duration: .5,
+    stagger: .55
   }, "<")
 
 tlOpen.paused(true)
@@ -109,13 +109,13 @@ sidebarLinks.forEach((link) => {
 // hide sidebar 
 bgOverlay.addEventListener('click', closeMenu)
 sidebarLinks.forEach((link) => {
-  link.addEventListener('click', () => {
-    event.preventDefault();
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
     tlOpen.reverse(1.5)
     tlOpen.eventCallback('onReverseComplete', redirectToURL)
-  } )
+  })
 })
 
-function redirectToURL(){
+function redirectToURL() {
   window.location.href = '';
 }
