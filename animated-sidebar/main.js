@@ -116,6 +116,7 @@ sidebarLinks.forEach((link) => {
   })
 })
 
+// optional 
 function redirectToURL() {
   window.location.href = '';
 }
