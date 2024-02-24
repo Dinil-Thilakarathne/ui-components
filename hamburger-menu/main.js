@@ -3,6 +3,7 @@ import './style.scss'
 const topnavOpenBtn = document.querySelector('#btnOpen')
 const media = window.matchMedia('(width < 40em)');
 const topNavMenu = document.querySelector('.topnav__menu');
+const navLinks = document.querySelectorAll('.topnav__link')
 
 let isOpen = false
 
@@ -40,4 +41,11 @@ topnavOpenBtn.addEventListener('click', handleBtnClick)
 
 media.addEventListener('change', function (e) {
   setupTopNav(e);
+});
+
+navLinks.forEach(element => {
+  element.addEventListener('click', (e) => {
+    e.preventDefault()
+    handleBtnClick()
+  })
 });
