@@ -1,0 +1,69 @@
+:root {
+  --color-preloader-box: hsl(229, 82%, 67%);
+  --color-white: hsl(0, 0%, 90%);
+  --color-black: hsl(0, 0%, 10%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-white);
+  position: relative;
+  font-family: "Ojuju", sans-serif;
+  overflow: hidden;
+  color: var(--color-black);
+}
+
+.preloader {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.preloader-wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.preloader .preloader-boxes {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+}
+.preloader-boxes .box {
+  height: 100%;
+  width: 110%;
+  background-color: var(--color-preloader-box);
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.preloader .preloader-content {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(2rem, (1.5rem + 2.5vw), 6rem);
+}
+
+/* additional styles */
+.hero {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(2rem, (1.5rem + 3.5vw), 6rem);
+  text-transform: uppercase;
+}
