@@ -1,0 +1,106 @@
+:root {
+  --color-green: #48ee8a;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-white-shade: #e4e6eb;
+  --color-gray: #545a70;
+
+  --color-bg: #b2b7c7;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Poppins";
+  background-color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: min(90%, 768px);
+  background-color: var(--color-white);
+  border: none;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  @media screen and (min-width: 768px){
+    padding: 2rem;
+}
+}
+
+.card-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: .75rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--color-white-shade);
+
+  @media screen and (min-width: 768px){
+      flex-direction: row;
+      align-items: center;
+  }
+}
+.card-tag {
+  background-color: var(--color-green);
+  padding: 0.75rem 1.25rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.25rem;
+  width: fit-content;
+}
+
+.card-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.card-bottom-info {
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-bottom-info > div {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.view-details-btn {
+  width: fit-content;
+  padding: 1rem 1.25rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  background-color: var(--color-white-shade);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.view-details-btn .svg-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.card-top-info__description,
+.card-amount > span:first-child,
+.billing-date > span:first-child {
+  color: var(--color-gray);
+}
