@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap");
 :root {
   --color-green: #48ee8a;
   --color-black: #000000;
@@ -31,22 +32,22 @@ body {
   flex-direction: column;
   padding: 1rem;
 
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     padding: 2rem;
-}
+  }
 }
 
 .card-top {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  row-gap: .75rem;
+  row-gap: 0.75rem;
   padding-bottom: 1rem;
   border-bottom: 2px solid var(--color-white-shade);
 
-  @media screen and (min-width: 768px){
-      flex-direction: row;
-      align-items: center;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
   }
 }
 .card-tag {
