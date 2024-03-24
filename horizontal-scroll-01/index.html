@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    
     <div class="horizontal-scroll">
       <div class="scroll-section">
         <h1>Infinite Horizontal Scroll</h1>
@@ -16,18 +17,6 @@
       </div>
     </div>
 
-    <script>
-      const rootStyles = document.querySelector(":root");
-      function handleWindowResize() {
-        const scrollSectionWidth =
-          document.querySelector(".scroll-section").clientWidth;
-        rootStyles.style.setProperty(
-          "--scroll-section-width",
-          `${scrollSectionWidth}px`
-        );
-      }
-      handleWindowResize();
-      window.addEventListener("resize", handleWindowResize);
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
