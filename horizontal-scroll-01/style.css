@@ -1,0 +1,61 @@
+:root {
+  --gap: 16px;
+  --scroll-section-width: 100vw;
+  --calc-scroll-section-width: calc(var(--scroll-section-width) + var(--gap));
+  --fs-header: clamp(0.75rem, 2vw + 2.5rem, 8rem);
+}
+@media screen and (width > 458px) {
+  :root {
+    --gap: 0px;
+    --_scroll-section-width: 100vw;
+    --calc-scroll-section-width: var(--_scroll-section-width);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  width: 100vw;
+  font-family: "poppins";
+  display: grid;
+  place-items: center;
+}
+.horizontal-scroll {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+  justify-items: flex-start;
+  column-gap: var(--gap);
+
+  &:hover {
+    & .scroll-section {
+      animation-play-state: paused;
+    }
+  }
+
+  & .scroll-section {
+    min-width: 100vw;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-wrap: nowrap;
+    animation: scroll 10s linear infinite;
+
+    & h1 {
+      font-size: var(--fs-header);
+      pointer-events: none;
+    }
+  }
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(var(--calc-scroll-section-width) * -1));
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="horizontal-scroll">
+      <div class="scroll-section">
+        <h1>Infinite Horizontal Scroll</h1>
+      </div>
+      <div class="scroll-section" aria-hidden="true">
+        <h1>Infinite Horizontal Scroll</h1>
+      </div>
+    </div>
+
+    <script>
+      const rootStyles = document.querySelector(":root");
+      function handleWindowResize() {
+        const scrollSectionWidth =
+          document.querySelector(".scroll-section").clientWidth;
+        rootStyles.style.setProperty(
+          "--scroll-section-width",
+          `${scrollSectionWidth}px`
+        );
+      }
+      handleWindowResize();
+      window.addEventListener("resize", handleWindowResize);
+    </script>
+  </body>
+</html>
