@@ -6,13 +6,13 @@ const menuContainer = document.querySelector('.menu-container')
 const menuItems = document.querySelectorAll('.menu-item')
 
 
-function menuToggele() {
+function menuToggle() {
     menuContainer.classList.toggle('active')
     menuIcon.classList.toggle('active')
 }
 
-mainItem.addEventListener('click', menuToggele)
+mainItem.addEventListener('click', menuToggle)
 
 menuItems.forEach(item => {
-    item.addEventListener('click', menuToggele)
+    item.addEventListener('click', menuToggle)
 })
