@@ -11,6 +11,7 @@
 | --------- | -------------------------------------------------------------------------------------- |
 | Button 02 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/button-02) |
 | Button 03 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/button-03) |
+| Button 04 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/button-04) |
 
 ## Cards
 
