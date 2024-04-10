@@ -35,6 +35,7 @@
 
 | Footer 01 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/fotter-01) |
 | --------- | -------------------------------------------------------------------------------------- |
+| Footer 02 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/fotter-02) |
 
 ## Image Galleries
 
