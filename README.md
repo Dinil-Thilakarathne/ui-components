@@ -52,6 +52,7 @@
 | Loader 01 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/loader-01) |
 | --------- | -------------------------------------------------------------------------------------- |
 | Loader 02 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/loader-02) |
+| Loader 03 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/loader-03) |
 
 ## Menus
 
