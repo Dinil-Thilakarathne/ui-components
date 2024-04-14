@@ -20,6 +20,7 @@
 | Card 02 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/card-02) |
 | Card 03 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/card-03) |
 | Card 04 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/card-04) |
+| Card 05 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/card-05) |
 
 ## Carousels
 
