@@ -21,10 +21,10 @@ const imgGallery = [
   "img-6.jpg",
 ]
 
-const  imgGalleryElement = document.querySelector('.img-gallery')
+const imgGalleryElement = document.querySelector('.img-gallery')
 
 imgGallery.forEach(img => {
-  const image =  document.createElement('img')
+  const image = document.createElement('img')
   image.setAttribute('src', img)
   image.classList.add('image-element')
   imgGalleryElement.appendChild(image)
@@ -37,10 +37,10 @@ const mainImageElemnt = document.querySelector('.main-img__image')
 imageElements.forEach(img => {
   img.addEventListener('click', (e) => {
     const clickedImgSrc = e.target.getAttribute('src');
-    const lastPreviewImg= document.querySelector(".main-img img:last-child")
+    const lastPreviewImg = document.querySelector(".main-img img:last-child")
 
     // changeImgOpacity(img)
-    changeImg(lastPreviewImg,clickedImgSrc, img)
+    changeImg(lastPreviewImg, clickedImgSrc, img)
 
   })
 })
@@ -53,16 +53,16 @@ function changeImg(lastImg, newImgSrc, clickedImg) {
   const t1 = gsap.timeline()
 
   t1.to(imageElements, {
-    opacity:0.4
+    opacity: 0.4
   }).to(clickedImg, {
-    opacity:1,
+    opacity: 1,
     duration: 1
   }, "<")
-  .to(lastImg, {
-    scale: 1.75,
-    right: "50%",
-    duration: 1.75
-  },"<")
+    .to(lastImg, {
+      scale: 1.75,
+      right: "50%",
+      duration: 1.75
+    }, "<")
 
   const newImg = document.createElement('img')
   newImg.src = newImgSrc
