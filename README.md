@@ -42,6 +42,7 @@
 
 | Image Gallery 01 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/gallery-01) |
 | ---------------- | --------------------------------------------------------------------------------------- |
+| Image Gallery 02 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/gallery-02) |
 
 ## Horizontal Scroll
 
