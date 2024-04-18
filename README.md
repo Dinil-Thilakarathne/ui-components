@@ -32,6 +32,7 @@
 
 | Drop down 01 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/drop-down-01) |
 | ------------ | ----------------------------------------------------------------------------------------- |
+| Drop down 02 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/drop-down-02) |
 
 ## Footers
 
