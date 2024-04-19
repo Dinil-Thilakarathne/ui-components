@@ -1,0 +1,50 @@
+:root {
+  --primary-color: #f43a84;
+  --white: hsl(0, 0%, 90%);
+  --border-color: #f43a848f;
+  --boxShadow-color: #5816316c;
+
+  --p-inline: 1.75rem;
+  --p-block: 1rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  perspective: 200px;
+}
+.anim-button {
+  display: inline-block;
+  position: relative;
+  padding-inline: var(--p-inline);
+  padding-block: var(--p-block);
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  box-shadow: 0px 0px 0px var(--boxShadow-color);
+  border: none;
+  outline: none;
+  transform: translateZ(0);
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    top: -10px;
+    box-shadow: 0px 10px 10px var(--boxShadow-color);
+    transform: rotateX(20deg);
+  }
+
+  &:active {
+    top: 0px;
+    box-shadow: 0px 0px 0px var(--boxShadow-color);
+  }
+}
