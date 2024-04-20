@@ -66,6 +66,11 @@
 | ------- | ------------------------------------------------------------------------------------ |
 | Menu 02 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/menu-02) |
 
+## Profile cards
+
+| Card 01 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/profile-card-01) |
+| ------- | ------------------------------------------------------------------------------------ |
+
 ## Sidebars
 
 | Sidebar 01 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/sidebar-01) |

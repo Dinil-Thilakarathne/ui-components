@@ -1,0 +1,120 @@
+:root {
+  --color-white: hsl(0, 0%, 97%);
+  --color-black: hsl(0, 0%, 10%);
+  --color-bg: hsl(0, 0%, 85%);
+
+  --fs-small: clamp(0.65rem, 0.6286rem + 0.5178vw, 0.85rem);
+  --fs-medium: clamp(1rem, 0.6966rem + 5.0945vw, 1.25rem);
+  --fs-large: clamp(1rem, 0.6966rem + 10.0945vw, 1.75rem);
+
+  --card-height: 36rem;
+  --p-inline: clamp(0.75rem, 0.6286rem + 0.5178vw, 2rem);
+  --p-block: 1rem;
+  --row-gap: 1rem;
+  --border-radius: 0.5rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins";
+  background-color: var(--color-bg);
+}
+
+img {
+  max-width: 100%;
+}
+ul,
+menu {
+  list-style: none;
+}
+.card {
+  --_size-1: calc(var(--card-height) * 0.25);
+  --_size-2: calc(var(--_size-1) * 0.75);
+  width: min(100%, 480px);
+  height: var(--card-height);
+  display: grid;
+  grid-template-rows:
+    var(--_size-1) repeat(2, var(--_size-2))
+    1fr;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius);
+
+  & .card-banner {
+    overflow: hidden;
+    grid-column: 1/ -1;
+    grid-row: 1 / 3;
+
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  & .profile-pic {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    grid-column: 1/ -1;
+    grid-row: 2 / 4;
+    line-height: 1.1;
+
+    & img {
+      height: 10rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+    }
+
+    & .profile-name {
+      font-size: var(--fs-large);
+    }
+
+    & .profile-profession {
+      font-size: var(--fs-small);
+      font-style: italic;
+    }
+  }
+
+  & .profile-details {
+    grid-column: 1 / -1;
+    grid-row: 4 /5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: var(--row-gap);
+
+    & .profile-description {
+      padding-top: var(--p-block);
+      font-size: var(--fs-medium);
+      text-wrap: balance;
+      padding-inline: var(--p-inline);
+    }
+  }
+
+  & .profile-socials {
+    padding-top: var(--p-block);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+  }
+}
