@@ -41,6 +41,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20ch, 320px));
   justify-content: space-between;
+  row-gap: 1rem;
 }
 .card {
   width: min(100%, 320px);
@@ -55,6 +56,7 @@ a {
     overflow: hidden;
     height: 100%;
     width: 100%;
+    position: relative;
 
     & img {
       border-radius: var(--border-radius);
@@ -69,13 +71,11 @@ a {
   & .card-content {
     display: flex;
     flex-direction: column;
-    flex: 1 0;
     row-gap: calc(var(--row-gap) * 0.75);
     position: absolute;
     bottom: 0;
     padding-inline: var(--p-inline);
     padding-block: var(--p-block);
-    overflow: 0;
   }
 
   & .card-title {
