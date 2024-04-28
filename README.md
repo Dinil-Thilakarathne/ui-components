@@ -76,6 +76,7 @@
 | Sidebar 01 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/sidebar-01) |
 | ---------- | --------------------------------------------------------------------------------------- |
 | Sidebar 02 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/sidebar-02) |
+| Sidebar 03 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/sidebar-03) |
 
 ## text animations
 
