@@ -134,13 +134,11 @@ a {
     }
   }
 
-  :where(.sidebar-top, .sidebar-bottom)
-    :is(.header, .search-box, .side-nav__link, .profile) {
+  :is(.header, .search-box, .side-nav__link, .profile) {
     display: grid;
     grid-template-columns: 45px;
   }
-  :where(.sidebar-top, .sidebar-bottom)
-    :is(.text, .user-search, .profile-details > *, .name, #id) {
+  :is(.text, .user-search, .profile-details > *, .name, #id) {
     display: none;
   }
 
@@ -151,13 +149,11 @@ a {
       grid-template-columns: 45px 1fr;
     }
 
-    :where(.sidebar-top, .sidebar-bottom)
-      :is(.text, .user-search, .profile-details > *, .name, #id) {
+    :is(.text, .user-search, .profile-details > *, .name, #id) {
       display: block;
     }
 
-    :where(.sidebar-top, .sidebar-bottom)
-      :is(.search-box, .side-nav__link, .profile) {
+    :is(.search-box, .side-nav__link, .profile) {
       grid-template-columns: 45px 1fr;
       column-gap: var(--col-gap);
     }
