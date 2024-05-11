@@ -48,6 +48,10 @@
 | ---------------- | --------------------------------------------------------------------------------------- |
 | Image Gallery 02 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/gallery-02) |
 
+## Headers
+
+| Header 01 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/header-01) |
+| -------------------- | ------------------------------------------------------------------------------------------------- |
 ## Horizontal Scroll
 
 | Horizontal Scroll 01 | [Click here](https://github.com/Dinil-Thilakarathne/ui-components/tree/main/horizontal-scroll-01) |
