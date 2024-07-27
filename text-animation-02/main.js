@@ -1,4 +1,4 @@
-import './style.css'
+// import './style.css'
 
 // source https://codepen.io/Hyperplexed/pen/rNrJgrd
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
